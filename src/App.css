@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  min-height: 97vh;
 }
 
 .App-logo {
@@ -21,6 +22,115 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+.team-comparison {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-container {
+  width: 50%;
+  min-width: 400px;
+  display: flex;
+  /* background-color: #222222; */
+}
+
+.split-view-stats {
+  display: flex;
+}
+
+.split-view-stat {
+  width: 50%;
+}
+
+.points-text {
+  margin-top: 20%;
+}
+
+.team-content-container {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.charts-and-trends-container {
+  width: 100%;
+  padding: 0px 20px 10px 20px;
+  display: flex; 
+  justify-content: center;
+  flex-wrap: wrap;
+  /* change to grid */
+}
+
+.welcome-header-container {
+  padding-top: 40vh;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-header {
+  background-color: #eeeeee;
+  width: fit-content;
+  padding: 10px 390px;
+}
+
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: #222222;
+  background-color: #ffffff;
+  border-bottom: 1px solid #555555;
+  flex-wrap: wrap;
+}
+
+.stat-container {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+.comparison-stat-container {
+  min-width: 400px;
+  margin: 0 20px;
+  background-color: white;
+  padding: 10px;
+}
+
+.team-select-dropdown {
+  width: 200px;
+  color: #000000;
+  text-align: left;
+}
+
+.record-text {
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.record-text-in-chart {
+  position: absolute;
+  padding: 75px 52px;
+}
+
+.stat-title-container {
+  width: 100%;
+}
+
+.credits-and-info-container {
+  background-color: #ffffff;
+  border-top: 1px solid #555555;
+  width: 100%;
+  text-align: center;
+  height: 2vh;
 }
 
 @keyframes App-logo-spin {
