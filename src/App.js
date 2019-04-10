@@ -51,7 +51,7 @@ class App extends Component {
 
   render() {
     const { teamPanel1Data, teamPanel2Data } = this.state
-    const backgroundImagePath = '/background2.jpg'
+    const backgroundImagePath = 'https://samirjoshi.github.io/hockey-dashboard/background2.jpg'
 
     return (
       <div>
