@@ -63,7 +63,7 @@ class App extends Component {
           { !(teamPanel1Data.selectedTeam || teamPanel2Data.selectedTeam) &&
             <div className='welcome-header-container'>
               <div className='welcome-header'>
-                <h1>Hockey Dashboards</h1>
+                <h1>HOCKEY DASHBOARDS</h1>
                 <p>Choose two teams to see how they compare. Show that your team is going to win!</p>
               </div>
             </div>
