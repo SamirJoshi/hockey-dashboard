@@ -3,35 +3,35 @@
         "id": 1,
         "name": "New Jersey Devils",
         "primaryColor": "#CE1126",
-        "secondarColor": "#FFFFFF",
+        "secondaryColor": "#FFFFFF",
         "thirdColor": "#000000"
     },
     "NYI": {
         "id": 2,
         "name": "New York Islanders",
         "primaryColor": "#00539b",
-        "secondarColor": "#F47d30",
+        "secondaryColor": "#F47d30",
         "thirdColor": "#FFFFFF"
     },
     "NYR": {
         "id": 3,
         "name": "New York Rangers",
         "primaryColor": "#0038A8",
-        "secondarColor": "#CE1126",
+        "secondaryColor": "#CE1126",
         "thirdColor": "#FFFFFF"
     },
     "PHI": {
         "id": 4,
         "name": "Philadelphia Flyers",
         "primaryColor": "#F74902",
-        "secondarColor": "#000000",
+        "secondaryColor": "#000000",
         "thirdColor": "#FFFFFF"
     },
     "PIT": {
         "id": 5,
         "name": "Pittsburgh Penguins",
         "primaryColor": "#000000",
-        "secondarColor": "#CFC493",
+        "secondaryColor": "#CFC493",
         "thirdColor": "#FCB514"
     },
     "BOS": {
@@ -73,28 +73,28 @@
         "name": "Carolina Hurricanes",
         "id": 12,
         "primaryColor": "#CC0000",
-        "secondarColor": "#000000",
+        "secondaryColor": "#000000",
         "thirdColor": "#A2AAAD"
     },
     "FLA": {
         "id": 13,
         "name": "Florida Panthers",
         "primaryColor": "#041E42",
-        "secondarColor": "#C8102E",
+        "secondaryColor": "#C8102E",
         "thirdColor": "#B9975B"
     },
     "TBL": {
         "name": "Tampa Bay Lightning",
         "id": 14,
         "primaryColor": "#002868",
-        "secondarColor": "#FFFFFF",
+        "secondaryColor": "#FFFFFF",
         "thirdColor": "#000000"
     },
     "WSH": {
         "id": 14,
         "name": "Washington Capitals",
         "primaryColor": "#041E42",
-        "secondarColor": "#C8102E",
+        "secondaryColor": "#C8102E",
         "thirdColor": "#FFFFFF"
     },
     "CHI": {
@@ -108,7 +108,7 @@
         "id": 17,
         "name": "Detroit Red Wings",
         "primaryColor": "#CE1126",
-        "secondarColor": "#FFFFFF",
+        "secondaryColor": "#FFFFFF",
         "thirdColor": "#000000"
     },
     "NSH": {
