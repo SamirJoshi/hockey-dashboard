@@ -99,7 +99,7 @@ class App extends Component {
           }
         </div>  
         <div className='credits-and-info-container'>
-          Credits to the NHL and their stats API for the data used to construct the dashboards. Made with <span>🦈</span> by it me sj.
+          Credits to the NHL and their stats API for the data used to construct the dashboards. Made with <span role='img' aria-label='shark'>🦈</span> by it me sj.
         </div>  
       </div>
     )

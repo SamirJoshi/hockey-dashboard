@@ -102,10 +102,22 @@ h1 {
 }
 
 .comparison-stat-container {
-  min-width: 400px;
+  width: 33%;
   margin: 0 20px;
   background-color: white;
   padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .comparison-stat-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .comparison-stat-container {
+    width: 400px;
+  }
 }
 
 .team-select-dropdown {
