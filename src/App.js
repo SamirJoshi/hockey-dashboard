@@ -55,7 +55,7 @@ class App extends Component {
 
     return (
       <div>
-        <div className="App"style={{
+        <div className="App" style={{
           marginBottom: 0,
           backgroundImage: `url(${backgroundImagePath})`,
           backgroundSize: 'cover'

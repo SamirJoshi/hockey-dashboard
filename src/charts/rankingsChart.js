@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import '../App.css';
-
 import {
-  XYPlot,
+  FlexibleWidthXYPlot,
   XAxis,
   YAxis,
   HorizontalGridLines,
   HorizontalBarSeries,
   Hint
 } from 'react-vis'
+import { getRankingsSuffix } from '../utils/formattingUtil';
 
 class RankingsChart extends Component {
 
@@ -22,15 +22,14 @@ class RankingsChart extends Component {
     const { rankingValue } = this.state
 
     return (
-      <XYPlot
+      <FlexibleWidthXYPlot
         yType="ordinal"
         margin={{ left: 100 }}
-        width={ 550 }
         height={ 250 }
         xDomain={ [0, 32] }
         color={ colors.primaryColor }>
         <HorizontalGridLines />
-        <XAxis />
+        <XAxis tickFormat={v => `${ 31 - v }${ getRankingsSuffix(31 - v) }`}/>
         <YAxis />
         <HorizontalBarSeries
           onValueMouseOver={ v => this.setState({ rankingValue: v })}
@@ -44,7 +43,7 @@ class RankingsChart extends Component {
             </div>
           </Hint>
         }
-      </XYPlot>
+      </FlexibleWidthXYPlot>
     )
   }
 }

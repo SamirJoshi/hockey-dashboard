@@ -5,6 +5,7 @@ import './App.css';
 import teams from './constants/teams'
 import TeamSelectDropdown from './teamSelectDropdown'
 import RankingsChart from './charts/rankingsChart';
+import { getRankingsSuffix } from './utils/formattingUtil';
 
 class TeamPanel extends Component {
   constructor(props) {
@@ -59,23 +60,6 @@ class TeamPanel extends Component {
     </div>
   )
 
-  getRankingsSuffix = (rank) => {
-    if ([11, 12, 13].includes(rank)) {
-      return 'th'
-    } 
-    
-    const remainder = rank % 10
-    if (remainder === 1) {
-      return 'st'
-    } else if (remainder === 2) {
-      return 'nd'
-    } else if (remainder === 3) {
-      return 'rd'
-    } else {
-      return 'th'
-    }
-  }
-
   getRankingsData = (teamStats) => {
     const {
       goalsPerGame,
@@ -85,37 +69,37 @@ class TeamPanel extends Component {
       faceOffWinPercentage
     } = teamStats.rankings.stat
 
-    const goalsPerRank = 31 - parseInt(goalsPerGame)
-    const goalsAgainstRank = 31 - parseInt(goalsAgainstPerGame)
-    const ppRank = 31 - parseInt(powerPlayPercentage)
-    const pkRank = 31 - parseInt(penaltyKillPercentage)
-    const faceOffRank = 31 - parseInt(faceOffWinPercentage)
+    const goalsPerRank = parseInt(goalsPerGame)
+    const goalsAgainstRank = parseInt(goalsAgainstPerGame)
+    const ppRank = parseInt(powerPlayPercentage)
+    const pkRank = parseInt(penaltyKillPercentage)
+    const faceOffRank = parseInt(faceOffWinPercentage)
 
     const data = []
     data.push({
-      x: goalsPerRank,
+      x: 31 - goalsPerRank,
       y: 'Goals For',
-      label: `${ goalsPerRank }${ this.getRankingsSuffix(goalsPerRank) }`
+      label: `${ goalsPerRank }${ getRankingsSuffix(goalsPerRank) }`
     })
     data.push({
-      x: goalsAgainstRank,
+      x: 31 - goalsAgainstRank,
       y: 'Goals Against',
-      label: `${ goalsAgainstRank }${ this.getRankingsSuffix(goalsAgainstRank) }`
+      label: `${ goalsAgainstRank }${ getRankingsSuffix(goalsAgainstRank) }`
     })
     data.push({
-      x: ppRank,
+      x: 31 - ppRank,
       y: 'Power Play',
-      label: `${ ppRank }${ this.getRankingsSuffix(ppRank) }`
+      label: `${ ppRank }${ getRankingsSuffix(ppRank) }`
     })
     data.push({
-      x: pkRank,
+      x: 31 - pkRank,
       y: 'Penalty Kill',
-      label: `${ pkRank }${ this.getRankingsSuffix(pkRank) }`
+      label: `${ pkRank }${ getRankingsSuffix(pkRank) }`
     })
     data.push({
-      x: faceOffRank,
+      x: 31 - faceOffRank,
       y: 'Face Off %',
-      label: `${ faceOffRank }${ this.getRankingsSuffix(faceOffRank) }`
+      label: `${ faceOffRank }${ getRankingsSuffix(faceOffRank) }`
     })
 
     return data

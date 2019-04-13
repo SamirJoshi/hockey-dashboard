@@ -38,7 +38,6 @@
   width: 50%;
   min-width: 400px;
   display: flex;
-  /* background-color: #222222; */
 }
 
 .split-view-stats {
@@ -59,6 +58,14 @@
   padding: 20px 5px 0px 5px;
 }
 
+@media only screen and (max-width: 600px) {
+  .team-content-container {
+    width: 100%;
+    padding: 10px 0 0 50;
+  }
+}
+
+
 .charts-and-trends-container {
   width: 100%;
   padding: 0 0 10px 0;
@@ -77,6 +84,16 @@
   background-color: #eeeeee;
   width: fit-content;
   padding: 30px 390px 10px 390px;
+}
+
+@media only screen and (max-width: 600px) {
+  .welcome-header-container {
+    padding-top: 10vh;
+  }
+  .welcome-header {
+    width: 100%;
+    padding: 30px 0 10px 0;
+  }
 }
 
 h1 {
@@ -111,6 +128,7 @@ h1 {
 @media only screen and (max-width: 600px) {
   .comparison-stat-container {
     width: 100%;
+    margin: 5px 0 0 0;
   }
 }
 
