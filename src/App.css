@@ -65,7 +65,6 @@
   display: flex; 
   justify-content: center;
   flex-wrap: wrap;
-  /* change to grid */
 }
 
 .welcome-header-container {
@@ -123,7 +122,25 @@ h1 {
 
 .record-text-in-chart {
   position: absolute;
-  padding: 75px 52px;
+  padding: 75px 51px;
+}
+
+.radial-chart-tooltip {
+  background-color: #282c34;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 5px solid #282c34;
+  text-align: left;
+  min-width: 120px;
+}
+
+.radial-chart-tooltip-name {
+  font-size: 18px;
+}
+
+.radial-chart-tooltip-value {
+  font-size: 24px;
 }
 
 .stat-title-container {
