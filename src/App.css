@@ -56,12 +56,12 @@
 .team-content-container {
   width: 100%;
   max-width: 700px;
-  padding: 20px;
+  padding: 20px 5px 0px 5px;
 }
 
 .charts-and-trends-container {
   width: 100%;
-  padding: 0px 20px 10px 20px;
+  padding: 0 0 10px 0;
   display: flex; 
   justify-content: center;
   flex-wrap: wrap;
@@ -103,7 +103,7 @@ h1 {
 
 .comparison-stat-container {
   width: 33%;
-  margin: 0 20px;
+  margin: 5px 5px 0 5px;
   background-color: white;
   padding: 10px;
 }
@@ -116,7 +116,7 @@ h1 {
 
 @media only screen and (min-width: 900px) {
   .comparison-stat-container {
-    width: 400px;
+    width: 455px;
   }
 }
 
