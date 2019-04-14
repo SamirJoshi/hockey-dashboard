@@ -42,10 +42,13 @@
 
 .split-view-stats {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .split-view-stat {
   width: 50%;
+  min-width: 220px;
 }
 
 .points-text {
@@ -104,7 +107,7 @@ h1 {
 .team-header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 20px;
   color: #222222;
   background-color: #ffffff;
   border-bottom: 1px solid #555555;
