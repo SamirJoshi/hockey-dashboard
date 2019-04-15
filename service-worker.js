@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https:/hockey-dashboard/precache-manifest.9406874783eefd317738ba85fedef7fd.js"
+  "/hockey-dashboard/precache-manifest.77f15676e62cce5ed04bc2daa54ddc78.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("https:/hockey-dashboard/index.html", {
+workbox.routing.registerNavigationRoute("/hockey-dashboard/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
