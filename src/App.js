@@ -17,7 +17,7 @@ class App extends Component {
           <Switch>
             <Route path='/comparisons' component={ ComparisonDashboard } />
             <Route path='/team' component={ TeamDashboard } />
-            <Redirect exact path='/' to='/comparisons' />
+            <Redirect to='/comparisons' />
           </Switch>
         </Router>
         <div className='credits-and-info-container'>
