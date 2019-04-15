@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/hockey-dashboard/precache-manifest.a5eb97135f5acbb3fec5103652fb6cf2.js"
+  "/hockey-dashboard/precache-manifest.429acaddf48c0a1f24202b45d9ac677f.js"
 );
 
 workbox.clientsClaim();
