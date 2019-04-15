@@ -6,10 +6,13 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "moment": "^2.24.0",
+    "query-string": "^6.4.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "react-select": "^2.4.2",
+    "react-spinkit": "^3.0.0",
     "react-vis": "^1.11.6",
     "reactstrap": "^7.1.0"
   },

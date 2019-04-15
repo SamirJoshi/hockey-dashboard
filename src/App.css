@@ -40,6 +40,13 @@
   display: flex;
 }
 
+.team-dashboard {
+  display: grid;
+  grid-template-columns: 25fr 25fr 25fr 25fr;
+  grid-template-rows: 33fr 33fr 33fr;
+  height: 97vh;
+}
+
 .split-view-stats {
   display: flex;
   flex-wrap: wrap;
