@@ -1,15 +1,15 @@
 {
-  "main.css": "https://samirjoshi.github.io/hockey-dashboard/static/css/main.7310d71e.chunk.css",
-  "main.js": "https://samirjoshi.github.io/hockey-dashboard/static/js/main.e5a25af2.chunk.js",
-  "main.js.map": "https://samirjoshi.github.io/hockey-dashboard/static/js/main.e5a25af2.chunk.js.map",
-  "runtime~main.js": "https://samirjoshi.github.io/hockey-dashboard/static/js/runtime~main.bebb28ff.js",
-  "runtime~main.js.map": "https://samirjoshi.github.io/hockey-dashboard/static/js/runtime~main.bebb28ff.js.map",
-  "static/css/2.cd5819bf.chunk.css": "https://samirjoshi.github.io/hockey-dashboard/static/css/2.cd5819bf.chunk.css",
-  "static/js/2.e79effb0.chunk.js": "https://samirjoshi.github.io/hockey-dashboard/static/js/2.e79effb0.chunk.js",
-  "static/js/2.e79effb0.chunk.js.map": "https://samirjoshi.github.io/hockey-dashboard/static/js/2.e79effb0.chunk.js.map",
-  "index.html": "https://samirjoshi.github.io/hockey-dashboard/index.html",
-  "precache-manifest.c8edd2a38f574adfed60a69b20b548f1.js": "https://samirjoshi.github.io/hockey-dashboard/precache-manifest.c8edd2a38f574adfed60a69b20b548f1.js",
-  "service-worker.js": "https://samirjoshi.github.io/hockey-dashboard/service-worker.js",
-  "static/css/2.cd5819bf.chunk.css.map": "https://samirjoshi.github.io/hockey-dashboard/static/css/2.cd5819bf.chunk.css.map",
-  "static/css/main.7310d71e.chunk.css.map": "https://samirjoshi.github.io/hockey-dashboard/static/css/main.7310d71e.chunk.css.map"
+  "main.css": "https:/hockey-dashboard/static/css/main.7310d71e.chunk.css",
+  "main.js": "https:/hockey-dashboard/static/js/main.e6fce98a.chunk.js",
+  "main.js.map": "https:/hockey-dashboard/static/js/main.e6fce98a.chunk.js.map",
+  "runtime~main.js": "https:/hockey-dashboard/static/js/runtime~main.768be4ae.js",
+  "runtime~main.js.map": "https:/hockey-dashboard/static/js/runtime~main.768be4ae.js.map",
+  "static/css/2.cd5819bf.chunk.css": "https:/hockey-dashboard/static/css/2.cd5819bf.chunk.css",
+  "static/js/2.cff7f478.chunk.js": "https:/hockey-dashboard/static/js/2.cff7f478.chunk.js",
+  "static/js/2.cff7f478.chunk.js.map": "https:/hockey-dashboard/static/js/2.cff7f478.chunk.js.map",
+  "index.html": "https:/hockey-dashboard/index.html",
+  "precache-manifest.9406874783eefd317738ba85fedef7fd.js": "https:/hockey-dashboard/precache-manifest.9406874783eefd317738ba85fedef7fd.js",
+  "service-worker.js": "https:/hockey-dashboard/service-worker.js",
+  "static/css/2.cd5819bf.chunk.css.map": "https:/hockey-dashboard/static/css/2.cd5819bf.chunk.css.map",
+  "static/css/main.7310d71e.chunk.css.map": "https:/hockey-dashboard/static/css/main.7310d71e.chunk.css.map"
 }
