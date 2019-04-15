@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/hockey-dashboard/static/js/runtime~main.675b093b.js"
   },
   {
-    "revision": "6a716b9fe4f277ca9532",
-    "url": "/hockey-dashboard/static/js/main.734d9b47.chunk.js"
+    "revision": "7704536d5895ddd8a2e0",
+    "url": "/hockey-dashboard/static/js/main.c0737a19.chunk.js"
   },
   {
-    "revision": "3ad071dd6e5b56e27eb1",
-    "url": "/hockey-dashboard/static/js/2.6d15e389.chunk.js"
+    "revision": "7d1c88f907c66cd54597",
+    "url": "/hockey-dashboard/static/js/2.41514e61.chunk.js"
   },
   {
-    "revision": "6a716b9fe4f277ca9532",
+    "revision": "7704536d5895ddd8a2e0",
     "url": "/hockey-dashboard/static/css/main.7310d71e.chunk.css"
   },
   {
-    "revision": "3ad071dd6e5b56e27eb1",
+    "revision": "7d1c88f907c66cd54597",
     "url": "/hockey-dashboard/static/css/2.cd5819bf.chunk.css"
   },
   {
-    "revision": "592965e3cf1cbccd1e4028d92bf2abd9",
+    "revision": "8a2ef6989e55e887f95c7f7cdd1b9e98",
     "url": "/hockey-dashboard/index.html"
   }
 ];
