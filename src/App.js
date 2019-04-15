@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Redirect,
   Switch
@@ -15,9 +15,9 @@ class App extends Component {
       <div>
         <Router>
           <Switch>
-            <Route path='/comparisons' component={ ComparisonDashboard } />
+            <Route path='/comparison' component={ ComparisonDashboard } />
             <Route path='/team' component={ TeamDashboard } />
-            <Redirect to='/comparisons' />
+            <Redirect from='/' to='/comparison' />
           </Switch>
         </Router>
         <div className='credits-and-info-container'>
