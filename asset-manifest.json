@@ -1,15 +1,15 @@
 {
-  "main.css": "/hockey-dashboard/static/css/main.7310d71e.chunk.css",
-  "main.js": "/hockey-dashboard/static/js/main.37bec6ac.chunk.js",
-  "main.js.map": "/hockey-dashboard/static/js/main.37bec6ac.chunk.js.map",
+  "main.css": "/hockey-dashboard/static/css/main.6458d58a.chunk.css",
+  "main.js": "/hockey-dashboard/static/js/main.507b7d1d.chunk.js",
+  "main.js.map": "/hockey-dashboard/static/js/main.507b7d1d.chunk.js.map",
   "runtime~main.js": "/hockey-dashboard/static/js/runtime~main.675b093b.js",
   "runtime~main.js.map": "/hockey-dashboard/static/js/runtime~main.675b093b.js.map",
   "static/css/2.cd5819bf.chunk.css": "/hockey-dashboard/static/css/2.cd5819bf.chunk.css",
-  "static/js/2.41514e61.chunk.js": "/hockey-dashboard/static/js/2.41514e61.chunk.js",
-  "static/js/2.41514e61.chunk.js.map": "/hockey-dashboard/static/js/2.41514e61.chunk.js.map",
+  "static/js/2.c250de96.chunk.js": "/hockey-dashboard/static/js/2.c250de96.chunk.js",
+  "static/js/2.c250de96.chunk.js.map": "/hockey-dashboard/static/js/2.c250de96.chunk.js.map",
   "index.html": "/hockey-dashboard/index.html",
-  "precache-manifest.467a0162b90fbaf49e62c905112a83f0.js": "/hockey-dashboard/precache-manifest.467a0162b90fbaf49e62c905112a83f0.js",
+  "precache-manifest.bda17d6c3f1294b3efb4d351be0066c3.js": "/hockey-dashboard/precache-manifest.bda17d6c3f1294b3efb4d351be0066c3.js",
   "service-worker.js": "/hockey-dashboard/service-worker.js",
   "static/css/2.cd5819bf.chunk.css.map": "/hockey-dashboard/static/css/2.cd5819bf.chunk.css.map",
-  "static/css/main.7310d71e.chunk.css.map": "/hockey-dashboard/static/css/main.7310d71e.chunk.css.map"
+  "static/css/main.6458d58a.chunk.css.map": "/hockey-dashboard/static/css/main.6458d58a.chunk.css.map"
 }
