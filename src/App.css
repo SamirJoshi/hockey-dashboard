@@ -121,6 +121,14 @@ h1 {
   flex-wrap: wrap;
 }
 
+.team-title-container {
+  display: flex;
+}
+
+.team-details-link {
+  margin: 8px 0 0 15px;
+}
+
 .stat-container {
   width: 100%;
   margin-bottom: 10px;
@@ -162,7 +170,8 @@ h1 {
 
 .record-text-in-chart {
   position: absolute;
-  padding: 75px 51px;
+  padding: 85px 58px;
+  font-size: 20px;
 }
 
 .radial-chart-tooltip {

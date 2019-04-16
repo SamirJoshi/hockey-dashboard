@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { RadialChart, Hint } from 'react-vis'
 import './App.css';
+import { Link } from 'react-router-dom'
 
 import teams from './constants/teams'
 import TeamSelectDropdown from './teamSelectDropdown'
@@ -109,7 +110,16 @@ class TeamPanel extends Component {
         style={{ justifyContent: panel === 1 ? 'flex-end' : 'flex-start' }}>
         <div className='team-content-container'>
           <div className='team-header'>
-            <h3>{ this.getTeamTitle() }</h3>
+            <div className='team-title-container'>
+              <h3>{ this.getTeamTitle() }</h3>
+              { !!selectedTeam &&
+                <Link
+                  className='team-details-link'
+                  to={ `/team?team=${selectedTeam}` }>
+                  View Details
+                </Link>
+              }
+            </div>
             <TeamSelectDropdown
                 panel={ panel }
                 selectedTeam={ selectedTeam }
