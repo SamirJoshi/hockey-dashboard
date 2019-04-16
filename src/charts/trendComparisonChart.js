@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import '../teamDashboard';
 
 import {
   FlexibleWidthXYPlot,
@@ -10,6 +11,14 @@ import {
   LineMarkSeries,
   Hint
 } from 'react-vis'
+
+const lastFiveAxisLabels = [
+  '5 Games Ago',
+  '4 Games Ago',
+  '3 Games Ago',
+  '2 Games Ago',
+  'Last Game'
+]
 
 class TrendComparisonChart extends Component {
   constructor(props) {
@@ -61,20 +70,24 @@ class TrendComparisonChart extends Component {
   )
 
   render() {
-    const { name, teamColors } = this.props
+    const { name, teamColors, isTeam } = this.props
     const { teamOneColor, teamTwoColor } = teamColors
     const { dataTeamOne, dataTeamTwo } = this.formatData()
     const maxValue = this.getUpperBound([...dataTeamOne, ...dataTeamTwo])
 
     return (
-      <div className='comparison-stat-container'>
+      <div className={isTeam ? 'team-stat-container' : 'comparison-stat-container'}>
         <h5>{ name }</h5>
         <FlexibleWidthXYPlot
           yDomain={ [0, maxValue + 5] }
+          margin={{ left: 55, right: 20, bottom: 70 }}
           height={300}>
           <VerticalGridLines />
           <HorizontalGridLines />
-          <XAxis />
+          <XAxis
+            tickFormat={ v => lastFiveAxisLabels[v - 1] }
+            tickLabelAngle={ -45 }
+            tickValues={[1, 2, 3, 4, 5]} />
           <YAxis />
           { this.renderLineMarkSeries(dataTeamOne, teamOneColor) }
           { this.renderLineMarkSeries(dataTeamTwo, teamTwoColor) }

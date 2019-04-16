@@ -17,9 +17,55 @@ class RankingsChart extends Component {
     this.state = { rankingsValue: false }
   }
 
+  getRankingsData = () => {
+    const {
+      goalsPerGame,
+      goalsAgainstPerGame,
+      powerPlayPercentage,
+      penaltyKillPercentage,
+      faceOffWinPercentage
+    } = this.props.data
+
+    const goalsPerRank = parseInt(goalsPerGame)
+    const goalsAgainstRank = parseInt(goalsAgainstPerGame)
+    const ppRank = parseInt(powerPlayPercentage)
+    const pkRank = parseInt(penaltyKillPercentage)
+    const faceOffRank = parseInt(faceOffWinPercentage)
+
+    const data = []
+    data.push({
+      x: 31 - goalsPerRank,
+      y: 'Goals For',
+      label: `${ goalsPerRank }${ getRankingsSuffix(goalsPerRank) }`
+    })
+    data.push({
+      x: 31 - goalsAgainstRank,
+      y: 'Goals Against',
+      label: `${ goalsAgainstRank }${ getRankingsSuffix(goalsAgainstRank) }`
+    })
+    data.push({
+      x: 31 - ppRank,
+      y: 'Power Play',
+      label: `${ ppRank }${ getRankingsSuffix(ppRank) }`
+    })
+    data.push({
+      x: 31 - pkRank,
+      y: 'Penalty Kill',
+      label: `${ pkRank }${ getRankingsSuffix(pkRank) }`
+    })
+    data.push({
+      x: 31 - faceOffRank,
+      y: 'Face Off %',
+      label: `${ faceOffRank }${ getRankingsSuffix(faceOffRank) }`
+    })
+
+    return data
+  }
+
   render () {
-    const { data, colors } = this.props
+    const { colors } = this.props
     const { rankingValue } = this.state
+    const formattedData = this.getRankingsData()
 
     return (
       <FlexibleWidthXYPlot
@@ -34,7 +80,7 @@ class RankingsChart extends Component {
         <HorizontalBarSeries
           onValueMouseOver={ v => this.setState({ rankingValue: v })}
           onSeriesMouseOut={ () => this.setState({ rankingValue: false })}
-          data={ data } />
+          data={ formattedData } />
         { rankingValue &&
           <Hint value={ rankingValue }>
             <div className='radial-chart-tooltip'>

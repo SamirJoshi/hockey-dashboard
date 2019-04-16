@@ -5,7 +5,6 @@ import './App.css';
 import teams from './constants/teams'
 import TeamSelectDropdown from './teamSelectDropdown'
 import RankingsChart from './charts/rankingsChart';
-import { getRankingsSuffix } from './utils/formattingUtil';
 
 class TeamPanel extends Component {
   constructor(props) {
@@ -60,57 +59,12 @@ class TeamPanel extends Component {
     </div>
   )
 
-  getRankingsData = (teamStats) => {
-    const {
-      goalsPerGame,
-      goalsAgainstPerGame,
-      powerPlayPercentage,
-      penaltyKillPercentage,
-      faceOffWinPercentage
-    } = teamStats.rankings.stat
-
-    const goalsPerRank = parseInt(goalsPerGame)
-    const goalsAgainstRank = parseInt(goalsAgainstPerGame)
-    const ppRank = parseInt(powerPlayPercentage)
-    const pkRank = parseInt(penaltyKillPercentage)
-    const faceOffRank = parseInt(faceOffWinPercentage)
-
-    const data = []
-    data.push({
-      x: 31 - goalsPerRank,
-      y: 'Goals For',
-      label: `${ goalsPerRank }${ getRankingsSuffix(goalsPerRank) }`
-    })
-    data.push({
-      x: 31 - goalsAgainstRank,
-      y: 'Goals Against',
-      label: `${ goalsAgainstRank }${ getRankingsSuffix(goalsAgainstRank) }`
-    })
-    data.push({
-      x: 31 - ppRank,
-      y: 'Power Play',
-      label: `${ ppRank }${ getRankingsSuffix(ppRank) }`
-    })
-    data.push({
-      x: 31 - pkRank,
-      y: 'Penalty Kill',
-      label: `${ pkRank }${ getRankingsSuffix(pkRank) }`
-    })
-    data.push({
-      x: 31 - faceOffRank,
-      y: 'Face Off %',
-      label: `${ faceOffRank }${ getRankingsSuffix(faceOffRank) }`
-    })
-
-    return data
-  }
-
   renderRankingsChart = () => {
     const { teamStats, colors } = this.props
 
     return (
       <RankingsChart
-        data={ this.getRankingsData(teamStats) }
+        data={ teamStats.rankings.stat }
         colors={ colors }/>
     )
   }

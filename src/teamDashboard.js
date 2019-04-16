@@ -4,6 +4,7 @@ import teams from './constants/teams'
 import { getTeamColors } from './utils/colorUtil'
 import { fetchPreviousFiveGames } from './utils/apiUtil'
 import TrendComparisonChart from './charts/trendComparisonChart';
+import RankingsChart from './charts/rankingsChart';
 
 const axios = require('axios')
 const queryString = require('query-string');
@@ -134,7 +135,20 @@ class TeamDashboard extends Component {
           statKey={ statKey}
           teamPanel1Data={ teamData }
           teamPanel2Data={ { lastFive: [] } }
-          teamColors={ teamColors }/>
+          teamColors={ teamColors }
+          isTeam />
+      </div>
+    )
+  }
+
+  renderRankingsChart = () => {
+    const { teamStats, colors } = this.state.teamData
+    return (
+      <div className='team-rankings'>
+        <h5>Rankings</h5>
+        <RankingsChart  
+          data={ teamStats.rankings.stat }
+          colors={ colors }/>
       </div>
     )
   }
@@ -142,6 +156,7 @@ class TeamDashboard extends Component {
   renderTeamDashboard = () => (
     <div className='team-dashboard'>
       { this.renderTeamHeader() }
+      { this.renderRankingsChart() }
       { this.renderComparisonStat('Goals', 'goals') }
       { this.renderComparisonStat('Shots', 'shots') }
       { this.renderComparisonStat('Hits', 'hits') }
