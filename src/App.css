@@ -202,6 +202,8 @@ h1 {
   width: 100%;
   text-align: center;
   height: 2vh;
+  position: fixed;
+  bottom: 2vh;
 }
 
 @keyframes App-logo-spin {

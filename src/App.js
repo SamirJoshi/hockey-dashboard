@@ -21,7 +21,9 @@ class App extends Component {
           </Switch>
         </Router>
         <div className='credits-and-info-container'>
-          Credits to the NHL and their stats API for the data used to construct the dashboards. Made with <span role='img' aria-label='shark'>🦈</span> by it me sj.
+          Credits to the NHL and their stats API for the data used to construct the dashboards.
+          Credits to https://teamcolorcodes.com/nhl-team-color-codes/ for collecting the team colors that were used on this site.
+          Made with <span role='img' aria-label='shark'>🦈</span> by it me sj.
         </div>  
       </div>
     )

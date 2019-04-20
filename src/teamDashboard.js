@@ -166,8 +166,6 @@ class TeamDashboard extends Component {
 
   render() {
     const { isLoading, teamData } = this.state
-    console.log(isLoading)
-    console.log(this.state)
     const backgroundImagePath = 'https://samirjoshi.github.io/hockey-dashboard/background2.jpg'
 
     return (
