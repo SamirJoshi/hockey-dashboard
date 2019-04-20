@@ -7,16 +7,14 @@
 
 .team-dashboard {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-template-rows: 33fr 33fr 33fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
   height: 97vh;
 }
 
 .team-info-pane-container {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
   padding: 10px;
 }
 
