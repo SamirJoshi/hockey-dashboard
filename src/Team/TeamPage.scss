@@ -1,0 +1,33 @@
+$breakpoint-tablet: 768px;
+.team-segment {
+    padding: 0px !important;
+
+    .header-container {
+        padding: 15px;
+        .header {
+            display: flex;
+            align-items: center;
+        }
+        .team-info-container {
+            background-color: #ffffff;
+            padding: 20px;
+        }
+    }
+
+    .cards {
+        padding: 20px;
+
+        .card {
+            @media (max-width: $breakpoint-tablet) {
+                width: 100%;
+            }
+
+            .text-card-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+            }
+        }
+    }
+}

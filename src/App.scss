@@ -1,0 +1,183 @@
+@import 'bulma/bulma.sass';
+@import '../node_modules/semantic-ui-css/semantic.min.css';
+
+$breakpoint-tablet: 768px;
+.hero-body {
+    padding: 1rem;
+
+    @media (max-width: $breakpoint-tablet) {
+        padding: 0;
+    }
+
+    .comparison-page {
+        width: 100%;
+        background-color: #fff;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+
+        .comparison-page-home-content {
+            text-align: center;
+
+            .header {
+                font-size: 3rem;
+            }
+            
+            .sub-header {
+                font-size: 1.5em;
+            }
+
+            .action-container {
+                margin: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .select-team-action {
+                    margin: 5px;
+                }
+            }
+        }
+
+        .team-panel-column {
+            min-width: 350px;
+            padding: 10px;
+        }
+
+        .header {
+            font-size: 1.5rem;
+        }
+
+        .stats-container {
+            background-color: blue;
+        }
+
+        .rankings-container {
+            background-color: blue;
+        }
+    }
+
+    .segment {
+        width: 100%;
+        min-height: 80px;
+        .team-divider {
+            @media (max-width: $breakpoint-tablet) {
+                display: none;
+            }
+        }
+    }
+
+    .team-panel-column {
+        min-width: 350px;
+
+        .team-panel {
+            padding: 10px;
+            @media (max-width: $breakpoint-tablet) {
+                padding: 0;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+
+                .header-text {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .stats-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                @media (max-width: $breakpoint-tablet) {
+                    display: block;
+                    text-align: center;
+                }
+
+                .points-text {
+                    font-size: 2rem;
+                }
+
+                .team-record {
+                    width: 80%;
+                    @media (max-width: $breakpoint-tablet) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .rankings-container {
+                .rankings-header {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .team-divider {
+                @media (max-width: $breakpoint-tablet) {
+                    display: none;
+                }
+            }
+
+            .recharts-pie-label-text {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .team-page {
+        .header {
+            font-size: 2rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .action-container {
+            margin: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .select-team-action {
+                margin: 5px;
+            }
+        }
+    }
+
+    .ranking-page {
+        width: 100%;
+
+        .ranking-header {
+            font-size: 2rem;
+        }
+
+        .ranking-list-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 10px;
+            font-size: 1.5rem;
+
+            .item-left {
+                display: flex;
+                align-items: center;
+
+                .rank-display {
+                    margin: 0px 10px;
+                }
+
+                .team-display {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
