@@ -18,7 +18,7 @@ export const ComparisonContainer: FC<ComparisonContainerProps> = ({ teamId1, tea
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true)
-      const { data } = await axios.get<{ team1: TeamData, team2: TeamData }>("http://localhost:3001/comparison/team", {
+      const { data } = await axios.get<{ team1: TeamData, team2: TeamData }>("/comparison/team", {
         params: {
           team1: teamId1,
           team2: teamId2
@@ -33,7 +33,7 @@ export const ComparisonContainer: FC<ComparisonContainerProps> = ({ teamId1, tea
   }, [teamId1, teamId2])
 
   const onChangeTeam1 = async (teamId: string) => {
-    const { data } = await axios.get<{ team1: TeamData }>("http://localhost:3001/comparison/team", {
+    const { data } = await axios.get<{ team1: TeamData }>("/comparison/team", {
       params: {
         team1: teamId
       }
@@ -42,7 +42,7 @@ export const ComparisonContainer: FC<ComparisonContainerProps> = ({ teamId1, tea
   }
 
   const onChangeTeam2 = async (teamId: string) => {
-    const { data } = await axios.get<{ team2: TeamData }>("http://localhost:3001/comparison/team", {
+    const { data } = await axios.get<{ team2: TeamData }>("/comparison/team", {
       params: {
         team2: teamId
       }

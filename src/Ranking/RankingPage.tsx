@@ -26,7 +26,7 @@ export const RankingPage: FC = () => {
   useEffect(() => {
     const fetchRanking = async () => {
       setIsLoading(true)
-      const { data } = await axios.get<{ ranking: TeamWithRank[] }>("http://localhost:3001/rankings")
+      const { data } = await axios.get<{ ranking: TeamWithRank[] }>("/rankings")
       setRankedTeams(data.ranking)
       setIsLoading(false)
     }

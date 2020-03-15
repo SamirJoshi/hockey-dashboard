@@ -18,7 +18,7 @@ export const TeamContainer: FC<TeamContainerProps> = ({ teamId }) => {
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true)
-      const { data } = await axios.get<{ teamData: TeamData, lastFive: LastFive }>("http://localhost:3001/comparison/details", {
+      const { data } = await axios.get<{ teamData: TeamData, lastFive: LastFive }>("/comparison/details", {
         params: { teamId }
       })
       setTeamData(data.teamData)
