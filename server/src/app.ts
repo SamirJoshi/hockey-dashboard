@@ -11,7 +11,7 @@ const app = express()
 app.use(cors())
 
 // Serve the static files from the React app
-app.use(express.static('../client/build'))
+app.use(express.static(path.join(__dirname, '../../client/build')))
 
 app.use('/comparison', comparisonRouter)
 app.use('/team', rankingRouter)
@@ -19,7 +19,7 @@ app.use('/rankings', rankingRouter)
 
 // Handles any requests that don't match the ones above
 app.get('*', (req, res) =>{
-  res.sendFile('../client/build/index.html')
+  res.sendFile(path.join(__dirname, '../../client/build/index.html'))
 })
 
 // catch 404 and forward to error handler
