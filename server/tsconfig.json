@@ -3,7 +3,8 @@
     "target": "es6",
     "sourceMap": true,
     "outDir": "dist",
-    "strict": true
+    "strict": true,
+    "module": "commonjs"
   },
   "include": [
     "src"

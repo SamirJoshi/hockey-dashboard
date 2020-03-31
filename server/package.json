@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "watch": "nodemon --config ./nodemon.json"
+    "watch": "nodemon --config ./nodemon.json",
+    "build": "tsc",
+    "start": "node dist/app.js"
   },
   "dependencies": {
     "@types/cors": "^2.8.6",
