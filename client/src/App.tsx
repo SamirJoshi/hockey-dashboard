@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
-import { HashRouter as Router, Route, Redirect, Switch, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect, Switch, NavLink } from 'react-router-dom'
 
 import { ComparisonPage } from './Comparison/ComparisonPage'
 import { TeamPage } from './Team/TeamPage'
