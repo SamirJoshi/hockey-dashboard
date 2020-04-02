@@ -10,7 +10,7 @@ function App() {
   const [showBurgerMenu, setShowBurgerMenu] = useState()
   return (
     <section className="hero is-fullheight has-background-white-ter">
-      <Router basename='/hockey-dashboard'>
+      <Router>
         <div className="hero-head">
           <div className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
