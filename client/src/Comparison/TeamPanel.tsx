@@ -30,7 +30,7 @@ export const TeamPanel: FC<TeamPanelProps> = ({ teamData, onChange }) => {
             data={[
               { name: 'Wins', value: teamData.record.wins, fill: getPrimaryColor(teamData.id) },
               { name: 'Losses', value: teamData.record.losses, fill: getSecondaryColor(teamData.id) },
-              { name: 'OT Losses', value: teamData.record.otl, fill: getTertiaryColor(teamData.id) }
+              { name: 'OTL', value: teamData.record.otl, fill: getTertiaryColor(teamData.id) }
             ]}
             dataKey="value"
             nameKey="name"
@@ -95,7 +95,9 @@ export const TeamPanel: FC<TeamPanelProps> = ({ teamData, onChange }) => {
           tickFormatter={ (val) => `${32 - val}${getRankingsSuffix(32 - val)}` }
         />
         <YAxis type="category" dataKey="name" />
-        <Tooltip />
+        <Tooltip
+          formatter={ (val) => `${32 - Number(val)}${getRankingsSuffix(32 - Number(val))}` }
+        />
         <Bar dataKey="value" fill={ getPrimaryColor(teamData.id) } />
       </BarChart>
     </ResponsiveContainer>

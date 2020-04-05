@@ -42,11 +42,6 @@ $breakpoint-tablet: 768px;
             }
         }
 
-        .team-panel-column {
-            min-width: 350px;
-            padding: 10px;
-        }
-
         .header {
             font-size: 1.5rem;
         }
@@ -63,6 +58,11 @@ $breakpoint-tablet: 768px;
     .segment {
         width: 100%;
         min-height: 80px;
+
+        @media (max-width: $breakpoint-tablet) {
+            padding: 1rem 0;
+        }
+
         .team-divider {
             @media (max-width: $breakpoint-tablet) {
                 display: none;
@@ -72,6 +72,9 @@ $breakpoint-tablet: 768px;
 
     .team-panel-column {
         min-width: 350px;
+        @media (max-width: $breakpoint-tablet) {
+            min-width: 100%;
+        }
 
         .team-panel {
             padding: 10px;
@@ -161,7 +164,7 @@ $breakpoint-tablet: 768px;
 
         .ranking-list-item {
             padding: 0;
-            
+
             .ranking-list-item-link {
                 display: flex;
                 align-items: center;
