@@ -160,22 +160,32 @@ $breakpoint-tablet: 768px;
         }
 
         .ranking-list-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 10px;
-            font-size: 1.5rem;
-
-            .item-left {
+            padding: 0;
+            
+            .ranking-list-item-link {
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                padding: 20px 10px;
+                font-size: 1.5rem;
+                color: #000000;
 
-                .rank-display {
-                    margin: 0px 10px;
+                &:hover {
+                    color: #ffffff;
+                    background-color: #000000;
                 }
 
-                .team-display {
+                .item-left {
                     display: flex;
+                    align-items: center;
+
+                    .rank-display {
+                        margin: 0px 10px;
+                    }
+
+                    .team-display {
+                        display: flex;
+                    }
                 }
             }
         }

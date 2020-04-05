@@ -157,10 +157,9 @@ export const teamMap = {
     "ANA": {
         "id": 24,
         "name": "Anaheim Ducks",
-        "primaryColor": "#F47A38",
-        "secondaryColor": "#B09862",
-        "thirdColor": "#C4CED4",
-        "fourthColor": "#010101"
+        "primaryColor": "#010101",
+        "secondaryColor": "#F47A38",
+        "thirdColor": "#B09862"
     },
     "DAL": {
         "id": 25,
