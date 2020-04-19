@@ -2,9 +2,11 @@ import React, { FC, useState, useEffect } from 'react'
 import { Segment, Header, Card, CardGroup, CardHeader, CardContent } from "semantic-ui-react"
 import axios from "axios"
 import './TeamPage.scss'
+import { away, home } from './data.json'
 
 import { TeamData, LastFive } from '../types/TeamData'
 import { getTeamName, getSecondaryColor, getPrimaryColor } from '../utils/teamMapUtils'
+import { ResponsiveContainer, ScatterChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Scatter, Label } from 'recharts'
 
 interface TeamContainerProps {
   teamId: string
@@ -34,6 +36,50 @@ export const TeamContainer: FC<TeamContainerProps> = ({ teamId }) => {
     blurb += `They are located in ${teamData!.info.city} and currently play in ${teamData!.info.venue}.`
 
     return blurb
+  }
+
+  const renderFenwickChart = () => {
+    const chartDataAway = Object.entries(away).map(([number, value]) => {
+      return {
+        ...value,
+        number
+      }
+    }) 
+    console.log(chartDataAway)
+    return (
+      <div className='fenwick-chart'>
+        <h1>
+          Player Fenwick
+        </h1>
+        <ResponsiveContainer width="100%" aspect={ 1 }> 
+          <ScatterChart margin={{ top: 20, right: 20, bottom: 30, left: 30 }}>
+            <CartesianGrid />
+            <XAxis type="number" dataKey="FF_perc_off" name="Fenwick Off" domain={[0, 1]}>
+              <Label value="Player Off Ice Fenwick For Percentage" offset={0} position="bottom" />
+            </XAxis>
+            <YAxis
+              dataKey="FF_perc_on" name="Fenwik On" domain={[0, 1]}
+              label={{
+                value: "Player On Ice Fenwick For Percentage",
+                position: "insideBottomLeft",
+                angle: -90
+              } }
+            />
+            <Tooltip />
+            <Scatter name="Sharks Player Fenwick" data={chartDataAway} fill={ getPrimaryColor(teamId) } />
+            <Scatter
+              name="Threshold"
+              data={[
+                {'FF_perc_off': 0, 'FF_perc_on': 0 },
+                {'FF_perc_off': 1, 'FF_perc_on': 1 }
+              ]}
+              fill="#ff0000"
+              line
+            />
+          </ScatterChart>
+        </ResponsiveContainer>
+      </div>
+    )
   }
 
   return(
@@ -98,7 +144,16 @@ export const TeamContainer: FC<TeamContainerProps> = ({ teamId }) => {
                 </div>
               </CardContent>
             </Card>
+            <Card>
+              <CardContent>
+                <CardHeader>Team Fenick For %</CardHeader>
+                <div className="text-card-content">
+                  { teamData.rankings.powerPlay }
+                </div>
+              </CardContent>
+            </Card>
           </CardGroup>
+          { renderFenwickChart() }
         </div>
       }
     </Segment>
