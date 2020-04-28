@@ -14,15 +14,34 @@ $breakpoint-tablet: 768px;
         }
     }
 
-    .cards {
+    .team-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 10px 10px;
         padding: 20px;
 
-        .card {
+        @media (max-width: $breakpoint-tablet) {
+            display: block;
+            padding: 10px;
+        }
+
+        .team-card {
+            background-color: white;
+            border: 1px solid #d4d4d4;
+            border-radius: 5px;
+            width: 100%;
+            padding: 16px;
+
             @media (max-width: $breakpoint-tablet) {
-                width: 100%;
+                margin: 10px 0;
             }
 
-            .text-card-content {
+            .team-card-header {
+                font-weight: 700;
+                font-size: 1.28em;
+            }
+
+            .team-card-content {
                 display: flex;
                 align-items: center;
                 justify-content: center;
